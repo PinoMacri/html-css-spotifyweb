@@ -1,0 +1,62 @@
+/*^-------------------------------------RESET------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*^-------------------------------------GENERAL------------------------------------*/
+div,
+footer,
+nav,
+main,
+header,
+section {
+    border: 1px dashed black;
+}
+/*^------------------------------------UTILITIES-----------------------------------*/
+.flex {
+    display: flex;
+}
+/*^------------------------------------CONTENTS-----------------------------------*/
+.content {
+    width: 100vw;
+    height: 90vh;
+}
+/**---Sidebar---**/
+.sidebar {
+    width: 10vw;
+    height: 90vh;
+    background-color: black;
+}
+/**---Main---**/
+main {
+    width: 90vw;
+    height: 90vh;
+    background-color: pink;
+}
+/*Header*/
+header {
+    width: 90vw;
+    height: 10vh;
+    background-color: red;
+}
+/*Section-Main*/
+.section-Main {
+    width: 90vw;
+    height: 80vh;
+    background-color: pink;
+}
+/*^------------------------------------FOOTER-----------------------------------*/
+footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+/*!--Responsive--*/
