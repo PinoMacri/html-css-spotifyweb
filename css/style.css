@@ -5,52 +5,142 @@
     box-sizing: border-box;
 }
 /*^-------------------------------------GENERAL------------------------------------*/
-div,
-footer,
-nav,
-main,
-header,
-section {
-    
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4 {
+    color: white;
+}
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+ul,a {
+    list-style: none;
+    color: #717171;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
 }
 /*^------------------------------------UTILITIES-----------------------------------*/
+/**---Display---**/
 .flex {
     display: flex;
 }
 /*^------------------------------------CONTENTS-----------------------------------*/
+/**---Contents---**/
+/*Contents*/
 .content {
-    width: 100vw;
+    width: 100%;
     height: 90vh;
 }
 /**---Sidebar---**/
+/*Sidebar*/
 .sidebar {
-    width: 200px;
+    min-width: 230px;
     height: 90vh;
     background-color: black;
+    padding: 20px;
+    position: relative;
+}
+/*Logo Nav*/
+.logoNav {
+    vertical-align: middle;
+    line-height: 32px;
+}
+.PrincipalLogo {
+    width: 120px;
+}
+/*Lista Nav Ricerca*/
+.sidebar ul {
+margin: 20px 0px;
+}
+.sidebar li {
+    margin: 15px 0px;
+}
+.listNav li a.flex {
+    align-items: center;
+}
+.svgNav {
+    width: 20px;
+}
+.listNav li a.flex svg {
+    margin-right: 5px;
+}
+/*Lista Nav Playlist*/
+.LI-Playlist {
+    align-items: center;
+}
+.fa-solid.fa-square-plus {
+    font-size: 40px;
+    margin-right: 8px;
+}
+/*Footer Nav*/
+.FooterNav {
+    position: absolute;
+    left: 20px;
+    bottom: 8px;
+    right: 20px;
+}
+.FooterNav-download {
+    padding-bottom: 10px;
+    align-items: center;
+}
+.downloadSvgFooterNav {
+    width: 20px;
+}
+.FooterNav-account {
+    padding-top: 10px ;
+}
+.FooterNav-account {
+   align-items: center;
+   border-top: 1px solid #717171;
+}
+.FooterNav-account h3 {
+    display: inline;
+    font-size: 15px;
+}
+.FooterNav-account .fa-solid.fa-circle-user {
+    font-size: 25px;
+}
+.usersSvgFooterNav {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #717171;
+    text-align: center;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.users {
+    width: 30px;
 }
 /**---Main---**/
+/*Main*/
 main {
-    width: 90vw;
+    width: 100%;
     height: 90vh;
     background-color: pink;
+    overflow-y: scroll; 
 }
 /*Header*/
 header {
-    width: 90vw;
+    width: 100%;
     height: 10vh;
     background-color: red;
+    position: sticky;
+    top: 0;
 }
 /*Section-Main*/
 .section-Main {
-    width: 90vw;
+    width: 100%;
     height: 80vh;
     background-color: pink;
     padding: 20px;
-    overflow-y: scroll; 
 }
 /*^------------------------------------FOOTER-----------------------------------*/
 footer {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: blue;
 }
@@ -61,4 +151,6 @@ footer {
 
 
 
+
 /*!--Responsive--*/
+
