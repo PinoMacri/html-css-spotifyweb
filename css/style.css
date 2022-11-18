@@ -1,13 +1,15 @@
-/*^-------------------------------------RESET------------------------------------*/
+/*^-------------------------------------RESET--------------------------------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 /*^-------------------------------------GENERAL------------------------------------*/
+/**---General---**/
 body {
     font-family: 'Montserrat', sans-serif;
 }
+/**---Scrittura---**/
 h1,h2,h3,h4 {
     color: white;
 }
@@ -27,15 +29,16 @@ ul,a {
 .flex {
     display: flex;
 }
-/*^------------------------------------CONTENTS-----------------------------------*/
-/**---Contents---**/
-/*Contents*/
+
+/*^-----------------------------PRINCIPAL CONTENTS / BLOCK 1-----------------------*/
+                /**---------------------Contents----------------------**/
+/* Contents */
 .content {
     width: 100%;
     height: 90vh;
 }
-/**---Sidebar---**/
-/*Sidebar*/
+                 /**--------------------Sidebar----------------------**/
+/* Sidebar */
 .sidebar {
     min-width: 230px;
     height: 90vh;
@@ -43,29 +46,35 @@ ul,a {
     padding: 20px;
     position: relative;
 }
+.sidebar li {
+    margin: 15px 0px;
+}
+.sidebar li a.flex {
+    align-items: center;
+}
 /*Logo Nav*/
 .logoNav {
     vertical-align: middle;
     line-height: 32px;
 }
+.logoSmartphone {
+    display: none;
+}
 .PrincipalLogo {
     width: 120px;
 }
 /*Lista Nav Ricerca*/
-.sidebar ul {
-margin: 20px 0px;
-}
-.sidebar li {
-    margin: 15px 0px;
-}
-.listNav li a.flex {
-    align-items: center;
+.listNav ul {
+    margin: 20px 0px;
 }
 .svgNav {
     width: 20px;
 }
 .listNav li a.flex svg {
     margin-right: 5px;
+}
+.aListRicercaSmartphoneVersion {
+    display: none;
 }
 /*Lista Nav Playlist*/
 .LI-Playlist {
@@ -115,15 +124,78 @@ margin: 20px 0px;
 .users {
     width: 30px;
 }
-/**---Main---**/
-/*Main*/
+/*!-- Responsive Sidebar MAX-576px --*/
+@media  screen and (max-width:576px) 
+{
+    /*Sidebar*/
+    .sidebar {
+    min-width: 70px;
+    }
+    .sidebar li {
+        margin: 5px 0px;
+    }
+    /*Logo Nav*/
+    .logoGenerale {
+    display: none;
+    }
+    .logoSmartphone {
+        display: block;
+    }
+    .logoSmartphone img {
+        filter: invert(1);
+        width: 30px;
+    }
+    /*Lista Nav Ricerca*/
+    .listNav ul {
+        margin: 0;
+    }
+    .aListRicercaPrincipalVersion {
+        display: none;
+    }
+    .aListRicercaSmartphoneVersion {
+        display: block;
+    }
+    .aListRicercaSmartphoneVersion svg {
+        width: 30px;
+    }
+    /*Lista Nav Playlist*/
+    .listaPlaylist {
+        display: none;
+    }
+    /*Footer Nav*/
+    .FooterNav-download {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .FooterNav-account {
+        justify-content: center;
+        border: none;
+    }
+    .textFooterNavExceptionSmartphone {
+        display: none;
+    }
+    .usersSvgFooterNav {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0;
+    }
+    .users {
+        width: 20px;
+    }
+}
+                /**-----------------------Main--------------------**/
+/* Main */
 main {
     width: 100%;
     height: 90vh;
     background-color: pink;
     overflow-y: scroll; 
 }
-/*Header*/
+                /**-----------------------Header------------------**/
+/* Header */
 header {
     width: 100%;
     height: 10vh;
@@ -131,14 +203,17 @@ header {
     position: sticky;
     top: 0;
 }
-/*Section-Main*/
+                 /**--------------------Section Main---------------**/
+/* Section Main */
 .section-Main {
     width: 100%;
     height: 80vh;
     background-color: pink;
     padding: 20px;
 }
-/*^------------------------------------FOOTER-----------------------------------*/
+/*^----------------------------------FOOTER / BLOCK 2------------------------------*/
+                 /**------------------------Footer----------------**/
+/* Footer */            
 footer {
     width: 100%;
     height: 10vh;
@@ -152,5 +227,7 @@ footer {
 
 
 
-/*!--Responsive--*/
+
+
+
 
