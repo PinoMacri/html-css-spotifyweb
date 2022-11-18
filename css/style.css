@@ -191,7 +191,6 @@ ul,a {
 main {
     width: 100%;
     height: 90vh;
-    background-color: pink;
     overflow-y: scroll; 
 }
                 /**-----------------------Header------------------**/
@@ -199,10 +198,20 @@ main {
 header {
     width: 100%;
     height: 10vh;
-    background-color: red;
+    background-color: #080B12 ;
     position: sticky;
     top: 0;
+    text-align: right;
+    line-height: 10vh;
 }
+header a {
+    color: white;
+    padding: 15px 25px;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+/*!-- Già tutto Responsive --*/
                  /**--------------------Section Main---------------**/
 /* Section Main */
 .section-Main {
@@ -210,6 +219,7 @@ header {
     height: 80vh;
     background-color: pink;
     padding: 20px;
+    background-color: #141922;
 }
 /*^----------------------------------FOOTER / BLOCK 2------------------------------*/
                  /**------------------------Footer----------------**/
