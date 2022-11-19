@@ -17,7 +17,7 @@ h1 {
     font-size: 25px;
     font-weight: 600;
 }
-ul,a {
+ul,a,p {
     list-style: none;
     color: #717171;
     font-weight: 700;
@@ -192,6 +192,7 @@ main {
     width: 100%;
     height: 90vh;
     overflow-y: scroll; 
+    background-color: #141922;
 }
                 /**-----------------------Header------------------**/
 /* Header */
@@ -217,10 +218,180 @@ header a {
 .section-Main {
     width: 100%;
     height: 80vh;
-    background-color: pink;
     padding: 20px;
     background-color: #141922;
 }
+/* Nav Section Main */
+.navSection-Main {
+    justify-content: center;
+}
+.navSection-Main ul {
+    gap: 25px;
+    margin-bottom: 40px;
+}
+.navSection-Main ul div {
+    border-top: 1px solid #ADFF2F;
+    width: 40px;
+    margin-top: 5px;
+}
+.navSection-Main li.flex {
+    flex-direction: column;
+    align-items: center;
+}
+/*!-- Responsive Section Main MAX-950px --*/
+@media  screen and (max-width:950px) 
+{
+    /* Section Main */
+.navSection-Main ul.flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    }
+}
+/* Visti Recenti */
+.titleVistiRecenti {
+    margin-bottom: 30px;
+}
+/*Row-Col-Card Visti*/
+.rowVisti {
+    height: 450px;
+    gap: 20px;
+}
+.rowVistiTablet {
+    display: none;
+}
+.rowVistiTablet2 {
+    display: none;
+}
+.cardVisti {
+    height: 100%;
+    width: calc(100% / 6 ) ;
+}
+.imgCardVisti {
+    height: 65%;
+    width: 100%;
+}
+.imgCardVisti img {
+    width: 100%;
+    height: 100%;
+}
+.textCardVisti {
+    min-height: 35%;
+    text-align: center;
+}
+.textCardVisti h3 {
+    margin: 10px 0px;
+}
+.rowVistiSmartphone,.rowVistiSmartphone2,.rowVistiSmartphone3,.rowVistiSmartphone4 {
+    display: none;
+}
+
+/*!-- Responsive Row-Col-Card Visti Main MAX-1800px --*/
+@media  screen and (max-width:1800px) 
+{
+    /*Row-Col-Card Visti*/
+.rowVisti {
+    display: none;
+}
+.rowVistiTablet {
+    display: flex;
+    min-height: 250px;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.cardVistiTablet {
+    width: calc(100% / 4 - 15px ) ;
+    overflow: hidden;
+    min-height: 250px;
+}
+.imgCardVistiTablet img {
+    width: 100%;
+}
+.textCardVistiTablet {
+    text-align: center;
+}
+.textCardVistiTablet h3 {
+    margin: 20px 0px;
+    font-size: 20px;
+}
+.textCardVistiTablet p {
+    font-size: 18px;
+}
+.rowVistiTablet.flex.start {
+    justify-content: flex-start;
+    gap: 20px;
+}
+}
+/*!-- Responsive Row-Col-Card Visti Main MAX-990px --*/
+@media  screen and (max-width:990px) 
+{
+    /*Row-Col-Card Visti*/
+    .rowVistiTablet,.rowVistiTablet2 {
+    display: none;
+    }
+    .rowVistiSmartphone,.rowVistiSmartphone2,.rowVistiSmartphone3 {
+        display: flex;
+        gap: 19px;
+        min-height: 350px;
+    }
+    .cardVistiSmartphone,.cardVistiSmartphone2,.cardVistiSmartphone3 {
+        margin-top: 20px;
+        width: calc(60% - 19px);
+    }
+    .imgCardVistiSmartphone img {
+        width: 100%;
+    }
+    .textCardVistiSmartphone {
+        text-align: center;
+    }
+    .textCardVistiSmartphone h3 {
+        margin: 15px 0px;
+        font-size: 16px;
+    }
+    .textCardVistiSmartphone p {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+}
+/*!-- Responsive Row-Col-Card Visti Main MAX-668px --*/
+@media  screen and (max-width:668px) 
+{
+    /*Row-Col-Card Visti*/
+    .rowVistiSmartphone,.rowVistiSmartphone2,.rowVistiSmartphone3 {
+        min-height: 300px;
+    }
+    .cardVistiSmartphone,.cardVistiSmartphone2,.cardVistiSmartphone3 {
+        margin: 0px;
+    }
+    .imgCardVistiSmartphone img {
+        width: 100%;
+    }
+    .textCardVistiSmartphone h3 {
+        font-size: 16px;
+        margin: 5px 0px;
+    }
+}
+/*!-- Responsive Row-Col-Card Visti Main MAX-576px --*/
+@media  screen and (max-width:576px) 
+{
+    /*Row-Col-Card Visti*/
+    .rowVistiSmartphone,.rowVistiSmartphone2,.rowVistiSmartphone3 {
+        display: none;
+    }
+    .rowVistiSmartphone4 {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        min-height: 2000px;
+        justify-content: space-between;
+    }
+    .cardVistiSmartphone4 {
+        min-height: 400px;
+    }
+}
+
+
 /*^----------------------------------FOOTER / BLOCK 2------------------------------*/
                  /**------------------------Footer----------------**/
 /* Footer */            
