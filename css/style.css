@@ -24,24 +24,20 @@ ul,a,p {
     font-size: 13px;
     text-decoration: none;
 }
-/*^------------------------------------UTILITIES-----------------------------------*/
+/*^------------------------------------UTILITIES------------------------------------*/
 /**---Display---**/
 .flex {
     display: flex;
 }
-
-/*^-----------------------------PRINCIPAL CONTENTS / BLOCK 1-----------------------*/
-                /**---------------------Contents----------------------**/
-/* Contents */
-.content {
-    width: 100%;
-    height: 90vh;
+/*^------------------------------------STRUTTURA------------------------------------*/
+/**-----------------------------------Main/Block1----------------------------------**/
+main {
+    height: calc(100vh - 130px);
+    display: flex;
 }
-                 /**--------------------Sidebar----------------------**/
-/* Sidebar */
+                                 /**---Sidebar---**/
 .sidebar {
-    min-width: 230px;
-    height: 90vh;
+    width: 230px;
     background-color: black;
     padding: 20px;
     position: relative;
@@ -51,6 +47,15 @@ ul,a,p {
 }
 .sidebar li a.flex {
     align-items: center;
+}
+.listaRicerca a:hover {
+    color: white;
+}
+.listaPlaylist a:hover {
+    color: white;
+}
+.FooterNav-download a:hover {
+    color: white;
 }
 /*Logo Nav*/
 .logoNav {
@@ -75,6 +80,13 @@ ul,a,p {
 }
 .aListRicercaSmartphoneVersion {
     display: none;
+}
+.selectionHome {
+    height: 30px;
+    width: 2px;
+    background-color: #ADFF2F;
+    position: absolute;
+    left: 0;
 }
 /*Lista Nav Playlist*/
 .LI-Playlist {
@@ -129,7 +141,7 @@ ul,a,p {
 {
     /*Sidebar*/
     .sidebar {
-    min-width: 70px;
+    width: 70px;
     }
     .sidebar li {
         margin: 5px 0px;
@@ -186,43 +198,50 @@ ul,a,p {
         width: 20px;
     }
 }
-                /**-----------------------Main--------------------**/
-/* Main */
-main {
-    width: 100%;
-    height: 90vh;
-    overflow-y: scroll; 
+
+/*----------------------------------------------------------------------------------*/
+
+                            /**---Container-Header&Section---*/
+.containerHeader-Section {
+    overflow-y: scroll;
     background-color: #141922;
 }
-                /**-----------------------Header------------------**/
-/* Header */
+
+/*----------------------------------------------------------------------------------*/
+
+                                   /**---Header---**/
 header {
-    width: 100%;
-    height: 10vh;
+    height: 130px;
     background-color: #080B12 ;
+    align-items: center;
+    justify-content: flex-end;
     position: sticky;
     top: 0;
-    text-align: right;
-    line-height: 10vh;
+    z-index: 1;
 }
 header a {
     color: white;
     padding: 15px 25px;
     border: 1px solid white;
     border-radius: 25px;
-    margin-right: 10px;
+    margin-right: 35px;
+}
+header a:hover {
+    transform: scale(1.3);
 }
 /*!-- Già tutto Responsive --*/
-                 /**--------------------Section Main---------------**/
-/* Section Main */
-.section-Main {
-    width: 100%;
-    height: 80vh;
+
+/*----------------------------------------------------------------------------------*/
+
+                              /**---Principal Content---**/
+.principalContent {
+    height: calc(100vh - 260px);
     padding: 20px;
     background-color: #141922;
 }
-                               /*&----Nav Section Main----**/
-/* UL/NAV Section Main */
+
+/*&----Nav Section Main----**/
+/* UL/NAV Principal Content */
 .navSection-Main {
     justify-content: center;
 }
@@ -239,6 +258,9 @@ header a {
     flex-direction: column;
     align-items: center;
 }
+.navSection-Main ul a:hover {
+    color: white;
+}
 /*!-- Responsive Section Main MAX-950px --*/
 @media  screen and (max-width:950px) 
 {
@@ -249,7 +271,10 @@ header a {
     gap: 20px;
     }
 }
-                                /*&----Recently Played----**/
+
+/*-----------------------------*/
+
+/*&----Recently Played----**/
 /* Visti Recenti */
 .titleVistiRecenti {
     margin-bottom: 30px;
@@ -272,6 +297,61 @@ header a {
 .imgCardVisti {
     height: 65%;
     width: 100%;
+    position: relative;
+}
+.imgCardVisti i {
+    display: none;
+}
+.imgCardVisti:hover img{
+    opacity: 0.5;
+}
+.imgCardVistiTablet:hover img{
+    opacity: 0.5;
+}
+.imgCardVistiSmartphone:hover img{
+    opacity: 0.5;
+}
+.imgCardVisti:hover i {
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50% , 50%);
+    cursor: pointer;
+}
+.imgCardVistiTablet {
+    position: relative;
+}
+.imgCardVistiSmartphone {
+    position: relative;
+}
+.imgCardVistiTablet i {
+    display: none;
+}
+.imgCardVistiSmartphone i {
+    display: none;
+}
+.imgCardVistiTablet:hover i {
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50% , 50%);
+    cursor: pointer;
+}
+.imgCardVistiSmartphone:hover i {
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50% , 50%);
+    cursor: pointer;
 }
 .imgCardVisti img {
     width: 100%;
@@ -287,7 +367,6 @@ header a {
 .rowVistiSmartphone,.rowVistiSmartphone2,.rowVistiSmartphone3,.rowVistiSmartphone4 {
     display: none;
 }
-
 /*!-- Responsive Row-Col-Card Visti Main MAX-1800px --*/
 @media  screen and (max-width:1800px) 
 {
@@ -391,7 +470,10 @@ header a {
         min-height: 400px;
     }
 }
-                                /*&----Creato per John Doe----**/
+
+/*-----------------------------*/
+
+/*&----Creato per John Doe----**/
 /*Section John Doe*/
 .titleJohnDoe {
     line-height: 30px;
@@ -407,10 +489,29 @@ header a {
 }
 .imgJohnDoe {
     height: 65%;
+    position: relative;
 }
 .imgJohnDoe img {
     width: 100%;
     height: 100%;
+}
+.imgJohnDoe i {
+    display: none;
+}
+.imgJohnDoe:hover {
+    cursor: pointer;
+}
+.imgJohnDoe:hover>img {
+    opacity: 0.5;
+}
+.imgJohnDoe:hover i {
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50% , 50%);
 }
 .textJohnDoe {
     text-align: center;
@@ -463,13 +564,16 @@ header a {
         width: 100% ;
     }
 }
-                                /*&----Artisti più popolari----**/
+
+/*-----------------------------*/
+
+/*&----Artisti più popolari----**/
 /*Section Artisti*/
 .titleArtisti {
     line-height: 30px;
 }
 .rowArtisti {
-    height: 450px;
+    height: 550px;
     gap: 20px;
     margin-top: 20px;
 }
@@ -479,12 +583,31 @@ header a {
 }
 .imgArtisti {
     height: 50%;
+    position: relative;
 }
 .imgArtisti img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover
+}
+.imgArtisti i {
+    display: none;
+}
+.imgArtisti:hover {
+    cursor: pointer;
+}
+.imgArtisti:hover>img {
+    opacity: 0.5;
+}
+.imgArtisti:hover i {
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50% , 50%);
 }
 .textArtisti {
     text-align: center;
@@ -538,18 +661,20 @@ header a {
     }
 }
 
-/*^----------------------------------FOOTER / BLOCK 2------------------------------*/
-                 /**------------------------Footer----------------**/
-/* Footer */         
+/*----------------------------------------------------------------------------------*/
+
+            /**----------------------Footer/Block2----------------------**/
 footer {
-    width: 100%;
-    height: 10vh;
+    height: 130px;
     background-color: #282828;
+}
+.containerFooter {
+    height: 100%;
 }
 /* Colonna sinistra */
 .colSxFooter {
     width: 20%;
-    height: 10vh;
+    height: 100%;
     align-items: center;
     gap: 25px;
 }
@@ -574,16 +699,24 @@ footer {
 .autoreBranoFooter p {
     font-size: 10px;
 } 
+.autoreBranoFooter p:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
 .cartelleFooter {
     gap: 20px;
 }
 .cartelleFooter a {
     font-size: 20px;
 }
+.cartelleFooter a:hover {
+    color: white;
+}
 /* Colonna centrale */
 .colCenFooter {
     width: 60%;
-    height: 10vh;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
 }
@@ -617,11 +750,32 @@ footer {
     width: 20%;
     background-color: #C1C1C1;
     border-radius: 10px;
+    position: relative;
+}
+.pallinoCaricamento {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    transform: translate(-0% , -29%);
+    right: 0;
+    display: none;
+}
+.barFooterCaricamento:hover {
+    background-color: #ADFF2F;
+    cursor: pointer;
+}
+.barFooterCaricamento:hover .pallinoCaricamento {
+    display: block;
+}
+.buttonPlayFooter .fa-regular.fa-circle-play:hover {
+    scale: 2;
 }
 /* Colonna destra */
 .colDxFooter {
     width: 20%;
-    height: 10vh;
+    height: 100%;
     gap: 20px;
     align-items: center;
     justify-content: flex-end;
@@ -650,17 +804,26 @@ footer {
     height: 100% ;
     background-color: #C1C1C1;
     border-radius: 20px;
+    position: relative;
 }
 .colCenFooterXS {
     display: none;
 }
+.barraCaricamentoDX:hover {
+    background-color: #ADFF2F;
+    cursor: pointer;
+}
+.barraCaricamentoDX:hover .pallinoCaricamento {
+    display: block;
+    height: 15px;
+    width: 15px;
+}
+
 /*!-- Responsive Footer MAX-788px --*/
 @media screen and (max-width:788px)
     {
     /* Colonna sinistra */
     .colSxFooter {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
     }
     .branoFooter {
@@ -669,6 +832,9 @@ footer {
     }
     .cartelleFooter {
     margin-left: 10px;
+    flex-direction: column;
+    gap: 0px;
+    margin-left: -30px;
     }
     .autoreBranoFooter {
     flex-direction: row;
@@ -732,41 +898,8 @@ footer {
     
 }
 /*!-- Responsive Altezza Footer Bonus --*/
-@media screen and (max-height: 900px )
-{ 
-body {
-    overflow-y: hidden;
-}
-footer {
-    position: sticky;
-    bottom: 0;
-    height: 101px;
-}
-.containerFooter {
-    height: 100%;
-}
-.colCenFooter,.colSxFooter,.colDxFooter {
-    height: 100%;
-}
-header {
-    position: sticky;
-    top: 0;
-    height: 101px;
-}
-header a {
-    position: sticky;
-    top: 30px;
-    right: 0px;
-}
-.FooterNav{
-    background-color: black;
-    position: fixed;
-    bottom: 110px;
-    width: 200px;
-    padding: 10px 0px;
-}
-}
-@media screen and (max-height: 630px ) {
+@media screen and (max-height: 710px) 
+{
     .listaPlaylist {
     overflow-y: scroll;
     height: 200px;
@@ -775,20 +908,9 @@ header a {
     display: none;
     }
 }
-@media screen and (max-height: 200px )
+@media screen and (max-height: 170px) 
 {
-footer {
-    opacity: 0.8;
+    .sidebar {
+       display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
