@@ -908,6 +908,12 @@ footer {
     display: none;
     }
 }
+@media screen and (max-height: 550px) 
+{
+    body {
+       overflow: hidden;
+    }
+}
 @media screen and (max-height: 170px) 
 {
     .sidebar {
