@@ -608,13 +608,13 @@ footer {
 }
 .barFooter {
     height: 7px;
-    width: 500px;
+    width: 40%;
     background-color: #5A5A5A;
     border-radius: 10px;
 }
 .barFooterCaricamento {
     height: 100%;
-    width: 100px;
+    width: 20%;
     background-color: #C1C1C1;
     border-radius: 10px;
 }
@@ -622,28 +622,165 @@ footer {
 .colDxFooter {
     width: 20%;
     height: 10vh;
-    justify-content: flex-end;
     gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
 }
 .cartelleColDX {
     align-items: center;
     gap: 20px;
+    width: 300px;
+    justify-content: flex-end;
 }
 .cartelleColDX a {
     color: white;
     font-size: 20px;
+   
 }
-.loadBarColDX {
-    align-items: center;
+.barraDX {
+    height: 7px;
+    width: 100px;
+    background-color: #5A5A5A;
+    border-radius: 20px;
     margin-right: 10px;
+    
 }
-.colDxFooter .barFooter {
+.barraCaricamentoDX {
+    width: 40% ;
+    height: 100% ;
+    background-color: #C1C1C1;
+    border-radius: 20px;
+}
+.colCenFooterXS {
+    display: none;
+}
+/*!-- Responsive Footer MAX-788px --*/
+@media screen and (max-width:788px)
+    {
+    /* Colonna sinistra */
+    .colSxFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    }
+    .branoFooter {
+    flex-direction: column;
+    margin-top: 10px;
+    }
+    .cartelleFooter {
+    margin-left: 10px;
+    }
+    .autoreBranoFooter {
+    flex-direction: row;
+    gap: 10px;
+    }
+    /* Colonna destra */ 
+    .cartelleColDX {
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    padding: 5px;
+    justify-content: center;
+    }
+    .cartelleColDX a {
+    font-size: 16px;
+    }
+}
+/*!-- Responsive Footer MAX-500px --*/
+@media screen and (max-width:500px)
+    {
+    .containerFooter {
+    justify-content: space-between;
+    }
+    /* Colonna centrale */
+    .colCenFooter {
+    display: none;
+    }
+    .colCenFooterXS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .buttonPlayFooterXS a {
+    font-size: 40px;
+    color: white;
+    }
+    .minuteFooterStartXS p {
+    color: white;
+    }
+    .minuteFooterEndXS p {
+    color: white;
+    }
+    .barFooterXS {
+    background-color: #5A5A5A;
+    width: 80px;
+    height: 7px;
+    border-radius: 20px;
+    }
+    .barFooterCaricamentoXS {
+    width: 20px;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #C1C1C1;
+    }
+    .loadBarFooterXS {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    }
+    
+}
+/*!-- Responsive Altezza Footer Bonus --*/
+@media screen and (max-height: 900px )
+{ 
+body {
+    overflow-y: hidden;
+}
+footer {
+    position: sticky;
+    bottom: 0;
+    height: 101px;
+}
+.containerFooter {
+    height: 100%;
+}
+.colCenFooter,.colSxFooter,.colDxFooter {
+    height: 100%;
+}
+header {
+    position: sticky;
+    top: 0;
+    height: 101px;
+}
+header a {
+    position: sticky;
+    top: 30px;
+    right: 0px;
+}
+.FooterNav{
+    background-color: black;
+    position: fixed;
+    bottom: 110px;
     width: 200px;
+    padding: 10px 0px;
 }
-.colDxFooter .barFooterCaricamento {
-    width: 50px;
 }
-
+@media screen and (max-height: 630px ) {
+    .listaPlaylist {
+    overflow-y: scroll;
+    height: 200px;
+    }
+    .FooterNav {
+    display: none;
+    }
+}
+@media screen and (max-height: 200px )
+{
+footer {
+    opacity: 0.8;
+    }
+}
 
 
 
