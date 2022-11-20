@@ -221,7 +221,8 @@ header a {
     padding: 20px;
     background-color: #141922;
 }
-/* Nav Section Main */
+                               /*&----Nav Section Main----**/
+/* UL/NAV Section Main */
 .navSection-Main {
     justify-content: center;
 }
@@ -248,6 +249,7 @@ header a {
     gap: 20px;
     }
 }
+                                /*&----Recently Played----**/
 /* Visti Recenti */
 .titleVistiRecenti {
     margin-bottom: 30px;
@@ -265,7 +267,7 @@ header a {
 }
 .cardVisti {
     height: 100%;
-    width: calc(100% / 6 ) ;
+    width: 15% ;
 }
 .imgCardVisti {
     height: 65%;
@@ -297,7 +299,6 @@ header a {
     display: flex;
     min-height: 250px;
     gap: 15px;
-    justify-content: space-between;
     margin-bottom: 40px;
 }
 .cardVistiTablet {
@@ -383,22 +384,264 @@ header a {
         display: flex;
         flex-direction: column;
         gap: 50px;
-        min-height: 2000px;
+        min-height: 200px;
         justify-content: space-between;
     }
     .cardVistiSmartphone4 {
         min-height: 400px;
     }
 }
-
+                                /*&----Creato per John Doe----**/
+/*Section John Doe*/
+.titleJohnDoe {
+    line-height: 30px;
+}
+.rowJohnDoe {
+    height: 450px;
+    gap: 20px;
+    margin-top: 20px;
+}
+.cardJohnDoe {
+    height: 100%;
+    width: 15%;
+}
+.imgJohnDoe {
+    height: 65%;
+}
+.imgJohnDoe img {
+    width: 100%;
+    height: 100%;
+}
+.textJohnDoe {
+    text-align: center;
+    height: 35%;
+}
+.textJohnDoe h3 {
+   margin: 10px 0px;
+}
+/*!-- Responsive Section John Doe MAX-1800px --*/
+@media  screen and (max-width:1800px) {
+    .rowJohnDoe {
+        height: auto;
+        min-height: 250px;
+    }
+    .cardJohnDoe {
+        width: calc(100% / 4 - 15px ) ;
+        min-height: 250px;
+    }
+    .textJohnDoe h3 {
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+    .titleJohnDoe {
+        margin-top: 50px;
+    }
+}
+/*!-- Responsive Section John Doe MAX-990px --*/
+@media  screen and (max-width:990px) {
+    .cardJohnDoe {
+        width: 60% ;
+    }
+    .textJohnDoe h3 {
+        font-size: 16px;
+        margin: 15px 0px;
+    }
+}
+/*!-- Responsive Section John Doe MAX-668px --*/
+@media  screen and (max-width:668px) {
+    .rowJohnDoe {
+        min-height: 350px;
+    }
+}
+/*!-- Responsive Section John Doe MAX-576px --*/
+@media  screen and (max-width:576px) {
+    .rowJohnDoe {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .cardJohnDoe {
+        width: 100% ;
+    }
+}
+                                /*&----Artisti più popolari----**/
+/*Section Artisti*/
+.titleArtisti {
+    line-height: 30px;
+}
+.rowArtisti {
+    height: 450px;
+    gap: 20px;
+    margin-top: 20px;
+}
+.cardArtisti {
+    height: 100%;
+    width: 15%;
+}
+.imgArtisti {
+    height: 50%;
+}
+.imgArtisti img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover
+}
+.textArtisti {
+    text-align: center;
+    height: 50%;
+}
+.textArtisti h3 {
+   margin: 10px 0px;
+}
+/*!-- Responsive Section Artisti MAX-1800px --*/
+@media  screen and (max-width:1800px) {
+    .rowArtisti {
+        height: auto;
+        min-height: 250px;
+    }
+    .cardArtisti {
+        width: calc(100% / 4 - 15px ) ;
+        min-height: 250px;
+    }
+    .textArtisti h3 {
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+    .titleArtisti {
+        margin-top: 50px;
+    }
+}
+/*!-- Responsive Section Artisti MAX-990px --*/
+@media  screen and (max-width:990px) {
+    .cardArtisti {
+        width: 60% ;
+    }
+    .textArtisti h3 {
+        font-size: 16px;
+        margin: 15px 0px;
+    }
+}
+/*!-- Responsive Section Artisti MAX-668px --*/
+@media  screen and (max-width:668px) {
+    .rowArtisti {
+        min-height: 350px;
+    }
+}
+/*!-- Responsive Section Artisti MAX-576px --*/
+@media  screen and (max-width:576px) {
+    .rowArtisti {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .cardArtisti {
+        width: 100% ;
+    }
+}
 
 /*^----------------------------------FOOTER / BLOCK 2------------------------------*/
                  /**------------------------Footer----------------**/
-/* Footer */            
+/* Footer */         
 footer {
     width: 100%;
     height: 10vh;
-    background-color: blue;
+    background-color: #282828;
+}
+/* Colonna sinistra */
+.colSxFooter {
+    width: 20%;
+    height: 10vh;
+    align-items: center;
+    gap: 25px;
+}
+.branoFooter {
+    gap: 10px;
+    margin-left: 10px;
+}
+.imgBranoFooter {
+    height: 50px;
+    width: 50px;
+}
+.imgBranoFooter img {
+    width: 100%;
+}
+.autoreBranoFooter {
+    justify-content: center;
+    flex-direction: column;
+}
+.autoreBranoFooter h3 {
+    font-size: 12px;
+} 
+.autoreBranoFooter p {
+    font-size: 10px;
+} 
+.cartelleFooter {
+    gap: 20px;
+}
+.cartelleFooter a {
+    font-size: 20px;
+}
+/* Colonna centrale */
+.colCenFooter {
+    width: 60%;
+    height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+}
+.buttonPlayFooter {
+    text-align: center;
+    margin-top: 10px;
+}
+.buttonPlayFooter a {
+    font-size: 27px;
+    color: white;
+    margin-right: 30px;
+    height: 50%;
+}
+.loadBarFooter {
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    gap: 20px;
+}
+.loadBarFooter p {
+    color: white;
+}
+.barFooter {
+    height: 7px;
+    width: 500px;
+    background-color: #5A5A5A;
+    border-radius: 10px;
+}
+.barFooterCaricamento {
+    height: 100%;
+    width: 100px;
+    background-color: #C1C1C1;
+    border-radius: 10px;
+}
+/* Colonna destra */
+.colDxFooter {
+    width: 20%;
+    height: 10vh;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.cartelleColDX {
+    align-items: center;
+    gap: 20px;
+}
+.cartelleColDX a {
+    color: white;
+    font-size: 20px;
+}
+.loadBarColDX {
+    align-items: center;
+    margin-right: 10px;
+}
+.colDxFooter .barFooter {
+    width: 200px;
+}
+.colDxFooter .barFooterCaricamento {
+    width: 50px;
 }
 
 
